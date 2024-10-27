@@ -66,6 +66,8 @@ requirements are the following:
  - using the `amd64` or `arm64` architecture;
  - an initial network configuration allowing internet access.
 
+{{< img src="img/pirogue-operating-modes.png" alt="PiRogue operating modes" class="d-block mx-auto" >}}
+
 The operating mode is selected automatically during the initial installation,
 based on the available interfaces. Let's have a look at the logic:
 
