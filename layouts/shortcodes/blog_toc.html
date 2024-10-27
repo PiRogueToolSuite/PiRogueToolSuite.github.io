@@ -1,0 +1,6 @@
+<div class="small mx-2 px-4 border-start border-primary border-1">
+    {{ $startLevel := .Page.Params.toc_start_level }}
+    {{ $endLevel := .Page.Params.toc_end_level }}
+    {{ $ordered := .Page.Params.toc_ordered }}
+    {{ .Page.Fragments.ToHTML $startLevel $endLevel $ordered }}
+</div>

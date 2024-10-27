@@ -37,6 +37,30 @@
   weight = 25
 
 [[main]]
+  name = "Announcements"
+  parent = "Blog"
+  url = "/categories/announcements/"
+  weight = 10
+
+[[main]]
+  name = "Activity reports"
+  parent = "Blog"
+  url = "/categories/activity-reports/"
+  weight = 11
+
+[[main]]
+  name = "Analysis  reports"
+  parent = "Blog"
+  url = "/categories/analysis-reports/"
+  weight = 12
+
+[[main]]
+  name = "Posts"
+  parent = "Blog"
+  url = "/categories/blog-posts/"
+  weight = 13
+
+[[main]]
   name = "Community"
   url = ""
   weight = 29
