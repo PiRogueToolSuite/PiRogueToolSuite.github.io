@@ -62,3 +62,38 @@ figcaption {
   margin-left: 1.5*$spacer !important;
   opacity: 0.75;
 }
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 0.75s infinite; 
+}
+
+.custom-terminal {
+  font-size: 0.85em;
+  color: #ced4da;
+  background-color: #23262f;
+}
+
+.custom-terminal pre {
+  font-style: italic;
+}
+
+.custom-terminal .prompt{
+  color: #b4f397;
+}
+
+.custom-terminal .comment{
+  font-style: italic;
+  color: #ced4da;
+}

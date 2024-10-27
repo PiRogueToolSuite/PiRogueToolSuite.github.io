@@ -42,7 +42,11 @@ pirogue-admin-client system get-configuration
 ```
 
 The result should look like:
-```yaml {linenos=true,hl_lines=[1,16],title="Example of configuration"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of configuration"
+cmd="pirogue-admin-client system get-configuration" 
+>}}
 DASHBOARD_PASSWORD: PiRogue
 ENABLE_DHCP: 'True'
 ENABLE_PUBLIC_ACCESS: 'False'
@@ -60,7 +64,7 @@ SYSTEM_OPERATING_MODE: wireguard
 WIFI_COUNTRY_CODE: FR
 WIFI_PASSPHRASE: superlongkey
 WIFI_SSID: PiRogue
-```
+{{< /terminal >}}
 
 Under the hood, administrating a PiRogue consists in modifying these variables.
 Subsequently, lots of system files are updated and
@@ -90,7 +94,7 @@ pirogue-admin-client --help
 ```
 
 The tool is subdivided in sections on which `--help` can be shown, *e.g*:
-```txt {linenos=true,title="Example of administration commands"}
+```txt {title="Example of administration commands"}
 pirogue-admin-client wifi --help
 pirogue-admin-client wifi get-configuration --help
 pirogue-admin-client wifi set-configuration --help
@@ -151,10 +155,14 @@ pirogue-admin-client isolated-network list-open-ports
 ```
 
 And the result looks like (if any ports are open):
-```yaml {linenos=true,title="Example of list of the ports that have been opened"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of list of the ports that have been opened"
+cmd="pirogue-admin-client isolated-network list-open-ports" 
+>}}
 - port: 8080
 - port: 9090
-```
+{{< /terminal >}}
 
 As an example, if you want to open the port `8080` on the isolated network, use the command:
 ```shell {title="Open a port on the isolated network"}
@@ -190,11 +198,15 @@ pirogue-admin-client wifi get-configuration
 ```
 
 The output looks like:
-```yaml {linenos=true,title="Example of WiFi access-point configuration"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of WiFi access-point configuration"
+cmd="pirogue-admin-client wifi get-configuration" 
+>}}
 country_code: FR
 passphrase: superlongkey
 ssid: PiRogue
-```
+{{< /terminal >}}
 
 Use this information to connect a device to the PiRogue access-point.
 
@@ -226,11 +238,16 @@ pirogue-admin-client vpn add-peer
 ```
 
 The result will look like:
-```yaml {linenos=true,title="Example of a peer definition"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of a peer definition"
+cmd="pirogue-admin-client vpn add-peer" 
+>}}
 idx: 3
 private_key: YGe5EF//sIj6QF/2sglmx20b7jxgxFpV1sl8hXBDy34=
 public_key: 8lSksu3/HF8vCGi5lCOktI3C9L68PsfNhzDwyuAtMQ0=
-```
+{{< /terminal >}}
+
 
 To get the a list of the currently configured peers, use the command:
 ```shell {title="List the Wireguard peers"}
@@ -238,14 +255,18 @@ pirogue-admin-client vpn list-peers
 ```
 
 The result will look like:
-```yaml {linenos=true,title="Example of list of Wireguard peers"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of list of Wireguard peers"
+cmd="pirogue-admin-client vpn list-peers" 
+>}}
 - idx: 2
   private_key: oA3PBMH5yhBCIykx1odFPbnH+QKq18FBPmdPU1MrmEQ=
   public_key: hdlwEsh7SQ0lEPC5Qpl66y9slJkhH4wUYEpzvkEq6V4=
 - idx: 3
   private_key: YGe5EF//sIj6QF/2sglmx20b7jxgxFpV1sl8hXBDy34=
   public_key: 8lSksu3/HF8vCGi5lCOktI3C9L68PsfNhzDwyuAtMQ0=
-```
+{{< /terminal >}}
 
 To delete a peer, you have to specify its index (`idx`):
 ```shell {title="Delete the peer #2"}
@@ -259,7 +280,11 @@ pirogue-admin-client vpn get-peer-configuration 3
 ```
 
 The result looks like:
-```ini {linenos=true,title="Example of peer configuration"}
+{{< terminal 
+prompt="pi@pirogue ➜" 
+title="Example of peer configuration"
+cmd="pirogue-admin-client vpn get-peer-configuration 3" 
+>}}
 [Interface]
 Address = 10.8.0.3/24
 PrivateKey = YGe5EF//sIj6QF/2sglmx20b7jxgxFpV1sl8hXBDy34=
@@ -270,7 +295,7 @@ EndPoint = 185.199.111.153:51820
 PublicKey = YxtvfgfpgCpkQKTI9vcVz0LnXGHIwF83Z65OBWw4F0A=
 AllowedIPs = 0.0.0.0/0
 PersistentKeepAlive = 20
-```
+{{< /terminal >}}
 
 You need to save the configuration of the peer in a `.conf` file to be loaded on the device. To do so, use the command: 
 ```shell {title="Save the configuration of the peer #3 in the file my-peer-3.conf"}
