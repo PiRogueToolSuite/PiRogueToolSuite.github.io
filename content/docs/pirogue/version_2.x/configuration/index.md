@@ -249,7 +249,7 @@ public_key: 8lSksu3/HF8vCGi5lCOktI3C9L68PsfNhzDwyuAtMQ0=
 {{< /terminal >}}
 
 
-To get the a list of the currently configured peers, use the command:
+To get the list of the currently configured peers, use the command:
 ```shell {title="List the Wireguard peers"}
 pirogue-admin-client vpn list-peers
 ```
