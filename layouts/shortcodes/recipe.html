@@ -1,0 +1,6 @@
+{{ range .Page.Params.steps }}
+{{ $filename := . | urlize }}
+{{ $filepath := printf "/shared/%s.md" $filename }}
+{{ $content := readFile $filepath }}
+{{ $content | markdownify }}
+{{ end }}
