@@ -1,10 +1,13 @@
-### Create a new Wireguard peer
+---
+title: "Create a new Wireguard peer"
+---
+
 To create a new Wireguard peer allowing a device to connect to the VPN network of the PiRogue, use the following command:
 ```shell {title="Add a new Wireguard peer"}
 pirogue-admin-client vpn add-peer
 ```
 
-{{< details "ℹ️ Get the list of already configured peers" >}}
+{{< details "ℹ️ Get the list of Wireguard peers" >}}
 To get the list of already configured peers, use the command:
 ```shell {title="List the Wireguard peers"}
 pirogue-admin-client vpn list-peers
@@ -28,6 +31,6 @@ cmd="pirogue-admin-client vpn list-peers"
 {{< details "ℹ️ Delete a Wireguard peer" >}}
 To delete a peer, you have to specify its index (`idx`):
 ```shell {title="Delete the peer #2"}
-pirogue-admin-client vpn delete-peer 2
+pirogue-admin-client vpn delete-peer [peer ID]
 ```
 {{< /details >}}

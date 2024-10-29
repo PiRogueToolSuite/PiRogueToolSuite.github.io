@@ -1,13 +1,14 @@
 ---
-title: "Connect a device to the VPN of PiRogue"
+title: "📚 Connect a device to the VPN of PiRogue"
 description: "Connect a device to the VPN of PiRogue"
 draft: false
 toc: false
 images: []
 params:
   steps: [
-    "pirogue-add-vpn-peer",
-    "pirogue-get-vpn-peer-config",
+    "pirogue-vpn-add-peer",
+    "pirogue-vpn-get-peer-config",
+    "pirogue-vpn-connect-mobile",
   ]
 ---
 
@@ -15,5 +16,4 @@ params:
 * you have already deployed a PiRogue online
 * your PiRogue operates on the mode *Wireguard*
 
-## Steps
 {{< recipe >}}

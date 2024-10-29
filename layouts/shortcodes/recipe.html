@@ -1,6 +1,20 @@
-{{ range .Page.Params.steps }}
-{{ $filename := . | urlize }}
-{{ $filepath := printf "/shared/%s.md" $filename }}
-{{ $content := readFile $filepath }}
-{{ $content | markdownify }}
+{{ $stepcount := len .Page.Params.steps }}
+<h2>... in {{$stepcount}} steps</h2>
+{{ range $index, $step := .Page.Params.steps }}
+    {{ $filename := . | urlize }}
+    {{ $pagepath := printf "/shared/%s" $filename }}
+    {{ with site.GetPage $pagepath }}
+        <div class="my-2">
+            <h3 class="mb-1">
+                <button type="button" class="btn btn-primary rounded-pill font-monospace" style="width: 2.8rem; height:2.8rem; margin-left: 3px;">
+                    <b>{{add $index 1}}</b>
+                </button>
+                {{ .Params.Title }}
+            </h3>
+            
+            <div class="border-primary border-start border-2 px-5 py-4 ms-4 shadow-lg">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ end }}
 {{ end }}
