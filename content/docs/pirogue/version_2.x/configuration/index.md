@@ -276,14 +276,14 @@ pirogue-admin-client vpn delete-peer 2
 ### Connect peers to the VPN
 To connect a peer to the Wireguard VPN, you first need to get its configuration. The peer configuration is returned by the command:
 ```shell {title="Get the configuration of the peer #3"}
-pirogue-admin-client vpn get-peer-configuration 3
+pirogue-admin-client vpn get-peer-config 3
 ```
 
 The result looks like:
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of peer configuration"
-cmd="pirogue-admin-client vpn get-peer-configuration 3" 
+cmd="pirogue-admin-client vpn get-peer-config 3" 
 >}}
 [Interface]
 Address = 10.8.0.3/24
@@ -299,7 +299,7 @@ PersistentKeepAlive = 20
 
 You need to save the configuration of the peer in a `.conf` file to be loaded on the device. To do so, use the command: 
 ```shell {title="Save the configuration of the peer #3 in the file my-peer-3.conf"}
-pirogue-admin-client vpn get-peer-configuration 3 > my-peer-3.conf
+pirogue-admin-client vpn get-peer-config 3 > my-peer-3.conf
 ```
 
 Alternatively, you can generate a QR-code to be scanned with the Wireguard mobile app:
