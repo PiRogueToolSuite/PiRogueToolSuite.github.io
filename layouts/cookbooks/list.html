@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $currentSection := .CurrentSection }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <article>
+      <h1 class="text-center">{{ if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{ else }}{{ .Title }}{{ end }}</h1>
+      <div class="text-center"><i>
+          There is no cookbook for your use case yet? 
+          <a class="" target="_blank" href="https://discord.gg/qGX73GYNdp">Let us know on Discord</a>!
+      </i></div>
+      {{ with .Content }}<div class="text-center">{{ . }}</div>{{ end }}
+        {{range .Site.RegularPages.GroupByParam "group" }}
+          {{ $groupname := substr .Key 3 }}
+          <h2>{{ $groupname | title }}</h2>
+          <div class="card-list mt-0">
+            {{ range .Pages }}
+              {{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
+                <div class="card my-2 shadow-sm border-primary-subtle">
+                  <div class="card-body p-3">
+                    <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} in {{len .Params.steps}} steps &rarr;</a>
+                  </div>
+                </div>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{end}}
+    </article>
+  </div>
+</div>
+{{ end }}

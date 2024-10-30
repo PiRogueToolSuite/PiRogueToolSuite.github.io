@@ -5,5 +5,6 @@
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
+    reading_speed = 238
     footer = ''
     alertText = "If you need help or just want to chat, feel free to join <a class=\"alert-link stretched-link\" href=\"https://discord.gg/qGX73GYNdp\" target=\"_blank\" rel=\"noopener\">our Discord server</a>."
