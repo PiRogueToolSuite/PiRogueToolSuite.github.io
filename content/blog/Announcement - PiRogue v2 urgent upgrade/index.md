@@ -1,5 +1,5 @@
 ---
-title:  "PiRogue v2 - System Upgrade Required"
+title: "⚠️ PiRogue v2 - SYSTEM UPGRADE REQUIRED ⚠️"
 description: "PiRogue v2 - System Upgrade Required"
 date: 2024-10-31
 lastmod: 2024-10-31
