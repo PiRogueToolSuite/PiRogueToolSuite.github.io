@@ -3,7 +3,7 @@ title:  "PiRogue v2 - System Upgrade Required"
 description: "PiRogue v2 - System Upgrade Required"
 date: 2024-10-31
 lastmod: 2024-10-31
-summary: "You must upgrade your PiRogue as soon as possible."
+summary: "You need to upgrade your PiRogue."
 draft: false
 weight: 50
 type: blog
@@ -15,7 +15,7 @@ featured: true
 categories: ['announcements']
 ---
 
-We released version 2 of PiRogue on October 24, 2024. If you installed a PiRogue between October 24, 2024 and October 31, 2024, you **must** run the following commands on your PiRogue as soon as possible:
+We released version 2 of PiRogue on October 24, 2024. If you installed a PiRogue between October 24, 2024 and October 31, 2024, you **must** run the following commands on your PiRogue:
 
 ```shell {title="Upgrade your PiRogue"}
 sudo wget -O /etc/apt/sources.list.d/pirogue.list https://pts-project.org/debian-12/pirogue.list
@@ -23,7 +23,7 @@ sudo apt update
 sudo apt dist-upgrade
 ```
 
-The mistake we made forces the installation to download Debian packages from the development PPA instead of the production PPA. The development PPA must not be used in production. There is no short term security concerns but we strongly invite you to upgrade your PiRogue as soon as possible.
+The mistake we made forces the installation to download Debian packages from the development PPA instead of the production PPA. The development PPA must not be used in production. There is no short term security concerns but we strongly invite you to upgrade your PiRogue.
 
 If you want to check if your PiRogue is affected, run the following command and make sure it produces the exact same output as the one below:
 
