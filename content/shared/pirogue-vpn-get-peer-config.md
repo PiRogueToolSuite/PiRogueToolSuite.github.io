@@ -1,7 +1,6 @@
 ---
 title: "Get the configuration of a Wireguard peer"
 ---
-
 To connect a peer to the Wireguard VPN, you first need to get its configuration. The peer configuration is returned by the command. You have to specify the ID of the peer you have previously created:
 ```shell {title="Get the configuration of a peer"}
 pirogue-admin-client vpn get-peer-config [peer ID]
@@ -32,3 +31,9 @@ To save the configuration of the peer in a `.conf` file to be loaded on the devi
 pirogue-admin-client vpn get-peer-config [peer ID] > my-peer-[peer ID].conf
 ```
 {{< /details >}}
+
+{{< callout context="danger" title="Security concerns" icon="alert-octagon" >}}
+**Never share the configuration of a peer publicly.** The configuration of a peer contains very sensitive information such as the IP address of your PiRogue and the private key of the peer. If you have any doubts, delete the peer and create it again.
+
+Generate only one configuration per device, and never use the same configuration on multiple devices.
+{{< /callout >}}

@@ -2,18 +2,18 @@
 {{ if .Inner }}{{ end }}
 
 <div class="border custom-terminal text-bg-dark p-3 mb-4">
-    <div class="font-monospace small">
+    <div class="font-monospace">
         <span class="prompt me-1">{{- .Get "prompt" -}}</span>
         <span class="comment"># {{ .Get "title" -}}</span>
     </div>
-    <div class="font-monospace small">
+    <div class="font-monospace">
         <span class="prompt me-1">{{- .Get "prompt" -}}</span>
         <span class="text-white">{{- .Get "cmd" -}}</span>
     </div>
     <pre class="text-black-80 custom-terminal my-1 ms-2">
         {{- .Inner -}}
     </pre>
-    <div class="font-monospace small">
+    <div class="font-monospace">
         <span class="prompt me-1">{{- .Get "prompt" -}}</span>
         <span class="blink">|</span>
     </div>
