@@ -36,6 +36,8 @@ deb https://pts-project.org/debian-12/pirogue ./
 deb https://pts-project.org/debian-12/pirogue-3rd-party ./
 {{< /terminal >}}
 
+On Raspberry Pi 5, the line `deb https://pts-project.org/debian-12/pirogue-3rd-party-pi5 ./` must be present too.
+
 If the output is not the same as above, contact us immediately on [Discord](https://discord.gg/qGX73GYNdp) or by email at `esther[at]defensive-lab.agency`.
 
 We sincerely apologize for the inconvenience.
