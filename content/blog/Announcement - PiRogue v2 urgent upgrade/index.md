@@ -15,7 +15,7 @@ featured: true
 categories: ['announcements']
 ---
 
-We released version 2 of PiRogue on October 24, 2024. If you have installed a PiRogue since that date, you **must** run the following commands on your PiRogue as soon as possible:
+We released version 2 of PiRogue on October 24, 2024. If you installed a PiRogue between October 24, 2024 and October 31, 2024, you **must** run the following commands on your PiRogue as soon as possible:
 
 ```shell
 wget -O /etc/apt/sources.list.d/pirogue.list https://pts-project.org/debian-12/pirogue.list
