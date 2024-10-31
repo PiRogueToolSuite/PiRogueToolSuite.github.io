@@ -2,7 +2,7 @@
 title: "Keep track of Wireguard peers"
 ---
 
-The Wireguard peers configured on your PiRogue are not named, a peer is identified by its ID only. If you want to associate a peer to an individual, you have to store this information separately, ideality not on your PiRogue. We suggest you keep track of the peers the following way:
+The Wireguard peers configured on your PiRogue are not named, a peer is identified by its ID only. If you want to associate a peer to an individual, you have to store this information separately, ideally not on your PiRogue. We suggest you keep track of the peers the following way:
 
 | Date       | Peer ID | Peer IP address | Individual |
 | -----------|:-------:|:---------------:|:-----------|
