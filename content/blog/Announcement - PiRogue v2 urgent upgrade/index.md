@@ -1,6 +1,6 @@
 ---
-title:  "⚠️ PiRogue v2 - SYSTEM UPGRADE REQUIRED ⚠️"
-description: "⚠️ PiRogue v2 - SYSTEM UPGRADE REQUIRED ⚠️"
+title:  "PiRogue v2 - System Upgrade Required"
+description: "PiRogue v2 - System Upgrade Required"
 date: 2024-10-31
 lastmod: 2024-10-31
 summary: "You must upgrade your PiRogue as soon as possible."
