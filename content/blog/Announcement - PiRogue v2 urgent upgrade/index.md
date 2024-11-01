@@ -11,7 +11,7 @@ outputs:
    - 'html'
    - 'email'
 contributors: ["Esther Onfroy"]
-featured: true
+featured: false
 categories: ['announcements']
 ---
 
