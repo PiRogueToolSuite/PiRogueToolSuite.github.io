@@ -13,6 +13,8 @@ outputs:
 contributors: ["Esther Onfroy", "Cyril Brulebois"]
 featured: false
 categories: ['announcements']
+# Stick to the original URL:
+slug: "%EF%B8%8F-pirogue-v2-system-upgrade-required-%EF%B8%8F"
 ---
 
 We released version 2 of PiRogue on October 24, 2024. If you installed a PiRogue between October 24, 2024 and October 31, 2024, the package manager's configuration might be incorrect. For affected systems, that means packages are downloaded from the development PPA instead of the production PPA.
