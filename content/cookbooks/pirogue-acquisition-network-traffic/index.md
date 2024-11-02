@@ -21,4 +21,11 @@ group: 'f. Acquisition'
 * one or more devices are connected to it
 {{< /callout >}}
 
+{{< link-card
+  icon="books"
+  title="Learn how to capture network traffic"
+  description="This guide will help you deepen your understanding of capturing network traffic."
+  href="/guides/g2/"
+>}}
+
 {{< recipe >}}
