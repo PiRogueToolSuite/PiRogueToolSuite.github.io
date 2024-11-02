@@ -1,5 +1,5 @@
 ---
-title: "📚 Deploy PiRogue VPN"
+title: "Deploy PiRogue VPN"
 description: "Deploy PiRogue VPN"
 draft: false
 toc: false

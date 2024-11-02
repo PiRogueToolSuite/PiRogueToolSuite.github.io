@@ -1,5 +1,5 @@
 ---
-title: "📚 Capture the network traffic of a device"
+title: "Capture the network traffic of a device"
 description: "Capture the network traffic of a device"
 draft: false
 toc: false
@@ -21,5 +21,12 @@ group: 'a. PiRogue VPN'
 * your PiRogue VPN is up and running
 * one or more devices are connected to it
 {{< /callout >}}
+
+{{< link-card
+  icon="books"
+  title="Learn how to capture network traffic"
+  description="This guide will help you deepen your understanding of capturing network traffic."
+  href="/guides/g2/"
+>}}
 
 {{< recipe >}}

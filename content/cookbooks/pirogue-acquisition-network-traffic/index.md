@@ -1,5 +1,5 @@
 ---
-title: "📚 Capture the network traffic of a device"
+title: "Capture the network traffic of a device"
 description: "Capture the network traffic of a device"
 draft: false
 toc: false

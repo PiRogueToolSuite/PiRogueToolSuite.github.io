@@ -1,5 +1,5 @@
 ---
-title: "📚 Connect a mobile device"
+title: "Connect a mobile device"
 description: "Connect a mobile device"
 draft: false
 toc: false
