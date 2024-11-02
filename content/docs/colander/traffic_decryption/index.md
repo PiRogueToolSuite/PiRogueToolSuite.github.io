@@ -10,6 +10,7 @@ toc: true
 ---
 
 {{< link-card
+  icon="books"
   title="Network traffic decryption"
   description="Learn how to decrypt network traffic with Colander"
   href="/guides/g9"

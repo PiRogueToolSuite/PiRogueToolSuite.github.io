@@ -50,6 +50,7 @@ Historically, PiRogue only targeted some Raspberry Pi models, offering Wi-Fi
 connectivity for the isolated network. That is covered by a dedicated guide.
 
 {{< link-card
+  icon="books"
   title="PiRogue installation"
   description="Learn how to install your PiRogue"
   href="/guides/g1/"
