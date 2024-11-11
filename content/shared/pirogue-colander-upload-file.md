@@ -2,7 +2,7 @@
 title: "Upload a file to a Colander case"
 ---
 
-With your PiRogue connected to your Colander account, you can upload artifacts and files to your cases. To do so, use the following command to upload a file to th4e given Colander case:
+With your PiRogue connected to your Colander account, you can upload artifacts and files to your cases. To do so, use the following command to upload a file to the given Colander case:
 
 ```shell {title="Upload a file to Colander"}
 pirogue-colander collect-artifact -c "[ID of the case in Colander]" [file to be uploaded]
