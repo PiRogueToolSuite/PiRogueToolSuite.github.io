@@ -65,6 +65,7 @@ requirements are the following:
 
  - a Debian 12 installation on a physical or virtual machine;
  - using the `amd64` or `arm64` architecture;
+ - with at least 4GB of RAM and 40GB of disk;
  - an initial network configuration allowing internet access.
 
 {{< img src="img/pirogue-operating-modes.png" alt="PiRogue operating modes" class="d-block mx-auto" >}}
@@ -139,6 +140,7 @@ The requirements are the same as in the previous section:
 
  - a Debian 12 installation on a physical or virtual machine;
  - using the `amd64` or `arm64` architecture;
+ - with at least 4GB of RAM and 40GB of disk;
  - an initial network configuration allowing internet access.
 
 With such a configuration, VPN is automatically selected as the operating mode,
