@@ -1,15 +1,14 @@
 ---
-title: "Upload files from PiRogue to Colander"
-description: "Upload files from PiRogue to Colander"
+title: "Transfer files from a device to PiRogue"
+description: "Transfer files from a device to PiRogue"
 draft: false
 toc: false
-weight: 4
+weight: 3
 images: []
 contributors: ["Esther Onfroy"]
 params:
   steps: [
-    "pirogue-colander-config",
-    "pirogue-colander-upload-file",
+    "pirogue-acquisition-files-from-device",
   ]
 type: 'cookbooks'
 categories: ['cookbooks']
@@ -18,7 +17,7 @@ group: 'f. Acquisition'
 
 {{< callout context="caution" title="Requirements" icon="alert-triangle" >}}
 * your PiRogue is up and running
-* you have a Colander account 
+* a device is connected to the isolated network
 {{< /callout >}}
 
 {{< recipe >}}

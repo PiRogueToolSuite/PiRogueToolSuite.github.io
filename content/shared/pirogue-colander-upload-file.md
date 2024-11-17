@@ -1,14 +1,16 @@
 ---
-title: "Upload a file to a Colander case"
+title: "Upload file or folder Colander"
 ---
 
-With your PiRogue connected to your Colander account, you can upload artifacts and files to your cases. To do so, use the following command to upload a file to the given Colander case:
+With your PiRogue connected to your Colander account, you can upload artifacts and files to your cases. To do so, use the following command to upload a file or the content of a folder to the given Colander case:
 
 ```shell {title="Upload a file to Colander"}
-pirogue-colander collect-artifact -c "[ID of the case in Colander]" [file to be uploaded]
+pirogue-colander collect-artifact -c "[ID of the case in Colander]" [file or folder to be uploaded]
 ```
 
-Then, choose the type of artifact to be created in Colander. This command can be found in workspace *Collect > Artifacts* in Colander.
+If the path you have specified is a file, the command uploads this file only. If the path is a folder, the command uploads all the files contained into this folder. The command doesn't upload the files ending with `.metadata.json` as they contain the attributes to pass to Colander.
+
+When asked, choose the type of artifact to create in Colander. The workspace *Collect > Artifacts* in Colander gives you the command to run.
 
 {{< details "ℹ️ Example of upload to Colander" >}}
 {{< terminal 
