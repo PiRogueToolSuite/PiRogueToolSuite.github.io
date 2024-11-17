@@ -29,7 +29,7 @@ The PiRogue tool suite (PTS) project code resides on GitHub at [github.com/PiRog
 
 ## Improve Documentation
 
-The PiRogue tool suite (PTS) project documentation resides in this [gitHub repository](https://github.com/PiRogueToolSuite/piroguetoolsuite.github.io/). Feel free to submit pull requests to improve existing documentation or add new content!. 
+The PiRogue tool suite (PTS) project documentation resides in this [GitHub repository](https://github.com/PiRogueToolSuite/piroguetoolsuite.github.io/). Feel free to submit pull requests to improve existing documentation or add new content!. 
 
 ## Help Others and Get Help
 
