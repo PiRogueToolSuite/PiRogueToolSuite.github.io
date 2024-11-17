@@ -9,6 +9,7 @@ contributors: ["Esther Onfroy"]
 params:
   steps: [
     "pirogue-acquisition-files-from-device",
+    "pirogue-acquisition-timestamp-files",
   ]
 type: 'cookbooks'
 categories: ['cookbooks']

@@ -50,4 +50,6 @@ Press Enter to stop the server
 {{< /terminal >}}
 {{< /details >}}
 
+If you want to upload these files to Colander, please refer to [this cookbook](/cookbooks/pirogue-acquisition-upload-file-colander/).
+
 
