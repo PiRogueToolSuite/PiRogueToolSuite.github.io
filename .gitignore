@@ -13,3 +13,7 @@ notes.txt
 data/advisory/pts-*.json
 build_data.sh
 notes
+styles/
+tmp/
+bin/
+hugo_stats.json
