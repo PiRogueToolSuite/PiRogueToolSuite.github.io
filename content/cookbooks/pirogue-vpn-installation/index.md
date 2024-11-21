@@ -21,6 +21,7 @@ group: 'a. PiRogue VPN'
 {{< callout context="caution" title="Requirements" icon="alert-triangle" >}}
 * you already have a server accessible from the Internet
 * your server has a public IP address
+* your server has exactly 1 network interface
 * your server runs Debian 12
 * your server has at least 4GB of RAM and 40GB of disk
 
