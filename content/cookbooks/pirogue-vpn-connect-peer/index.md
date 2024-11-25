@@ -26,4 +26,11 @@ group: 'a. PiRogue VPN'
 🤔 Not done yet? Check the [documentation](/cookbooks/pirogue-vpn-installation/).
 {{< /callout >}}
 
+{{< callout context="danger" title="Security considerations" icon="alert-octagon" >}}
+* **Remove VPN peer configurations:** Delete on the PiRogue and on peer's devices, any VPN peer configurations as soon as they're no longer needed.
+* **Handle peer configurations with care:** Peer configurations contain sensitive information. Share them securely and privately.
+* **PiRogue's IP address exposure:** Online services accessed through the VPN can see your PiRogue's IP address.
+{{< /callout >}}
+
+
 {{< recipe >}}
