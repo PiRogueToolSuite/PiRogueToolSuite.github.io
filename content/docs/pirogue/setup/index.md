@@ -136,6 +136,14 @@ where a server is made accessible over the internet, offering VPN connectivity.
 A typical installation would be a dedicated server or a VPS, with a single
 interface exposed on the internet.
 
+{{< callout context="tip" title="Hosting providers compatibility" icon="rocket">}}
+* {{< inline-svg src="circle-check" stroke="#41C067" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Hetzner
+  [{{< inline-svg src="external-link" width="1.0rem" height="1.0rem" class="mb-1 svg-inline-custom" >}}](https://www.hetzner.com/)
+* {{< inline-svg src="circle-check" stroke="#41C067" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Scaleway
+  [{{< inline-svg src="external-link" width="1.0rem" height="1.0rem" class="mb-1 svg-inline-custom" >}}](https://www.scaleway.com/)
+* {{< inline-svg src="circle-x" stroke="#EE5080" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Digital Ocean (incompatible)
+{{< /callout >}}
+
 The requirements are the same as in the previous section:
 
  - a Debian 12 installation on a physical or virtual machine;

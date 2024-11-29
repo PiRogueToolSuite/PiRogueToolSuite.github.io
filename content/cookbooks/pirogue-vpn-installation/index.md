@@ -18,6 +18,14 @@ categories: ['cookbooks']
 group: 'a. PiRogue VPN'
 ---
 
+{{< callout context="tip" title="Hosting providers compatibility" icon="rocket" >}}
+* {{< inline-svg src="circle-check" stroke="#41C067" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Hetzner
+  [{{< inline-svg src="external-link" width="1.0rem" height="1.0rem" class="mb-1 svg-inline-custom" >}}](https://www.hetzner.com/)
+* {{< inline-svg src="circle-check" stroke="#41C067" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Scaleway
+  [{{< inline-svg src="external-link" width="1.0rem" height="1.0rem" class="mb-1 svg-inline-custom" >}}](https://www.scaleway.com/)
+* {{< inline-svg src="circle-x" stroke="#EE5080" width="1.3rem" height="1.3rem" class="mb-1 svg-inline-custom" >}}Digital Ocean (incompatible)
+{{< /callout >}}
+
 {{< callout context="caution" title="Requirements" icon="alert-triangle" >}}
 * you already have a server accessible from the Internet
 * your server has a public IP address
