@@ -77,6 +77,12 @@
   parent = "Community"
 
 [[main]]
+  name = "Share your feedback"
+  url = "https://forms.gle/Ajof3sfKGCeHEBSj8"
+  weight = 15
+  parent = "Community"
+
+[[main]]
   name = "Discord server"
   url = "https://discord.com/invite/qGX73GYNdp"
   weight = 20
