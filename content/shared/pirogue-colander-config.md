@@ -9,7 +9,7 @@ The command looks like:
 pirogue-colander config -u "[URL of Colander]" -k "[API key]"
 ```
 
-{{< details "ℹ️ Example of Colander configuration command" >}}
+{{< details "Example of Colander configuration command" >}}
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of Colander configuration on PiRogue"

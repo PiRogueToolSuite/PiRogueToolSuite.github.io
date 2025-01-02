@@ -1,5 +1,12 @@
 {{ $stepcount := len .Page.Params.steps }}
 <h2>... in {{$stepcount}} steps</h2>
+
+<div class="ms-4 font-monospace text-muted fst-italic text-sm">
+    {{range .Page.Params.tags}}
+    <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
+    {{end}}
+</div>
+
 {{ range $index, $step := .Page.Params.steps }}
     {{ $filename := . | urlize }}
     {{ $pagepath := printf "/shared/%s" $filename }}

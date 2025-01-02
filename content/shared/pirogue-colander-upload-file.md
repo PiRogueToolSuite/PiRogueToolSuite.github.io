@@ -12,7 +12,7 @@ If the path you have specified is a file, the command uploads this file only. If
 
 When asked, choose the type of artifact to create in Colander. The workspace *Collect > Artifacts* in Colander gives you the command to run.
 
-{{< details "ℹ️ Example of upload to Colander" >}}
+{{< details "Example of upload to Colander" >}}
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of upload to Colander"

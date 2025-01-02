@@ -1,6 +1,6 @@
 ---
-title: "Connect a mobile device"
-description: "Connect a mobile device"
+title: "Connect a mobile device to PiRogue VPN"
+description: "Connect a mobile device to PiRogue VPN"
 draft: false
 toc: false
 weight: 2
@@ -14,8 +14,9 @@ params:
     "pirogue-vpn-identify-peer",
   ]
 type: 'cookbooks'
+tags: ['pirogue', 'vpn', 'peer']
 categories: ['cookbooks']
-group: 'a. PiRogue VPN'
+group: 'a. Setup'
 ---
 
 {{< callout context="caution" title="Requirements" icon="alert-triangle" >}}

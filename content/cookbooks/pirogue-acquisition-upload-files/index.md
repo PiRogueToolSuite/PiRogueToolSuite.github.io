@@ -3,7 +3,7 @@ title: "Transfer files from a device to PiRogue"
 description: "Transfer files from a device to PiRogue"
 draft: false
 toc: false
-weight: 3
+weight: 30
 images: []
 contributors: ["Esther Onfroy"]
 params:
@@ -12,6 +12,7 @@ params:
     "pirogue-acquisition-timestamp-files",
   ]
 type: 'cookbooks'
+tags: ['pirogue', 'upload', 'artifact']
 categories: ['cookbooks']
 group: 'f. Acquisition'
 ---

@@ -7,7 +7,7 @@ Then, generate the QR-code and scan it with the Wireguard app:
 pirogue-admin-client vpn get-peer-config [peer ID] | qrencode -t ansiutf8
 ```
 
-{{< details "ℹ️ Example of QR-code to scan with the Wireguard app" >}}
+{{< details "Example of QR-code to scan with the Wireguard app" >}}
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of QR-code of the configuration for peer 2"

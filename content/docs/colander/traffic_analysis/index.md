@@ -10,6 +10,7 @@ toc: true
 ---
 
 {{< link-card
+  icon="books"
   title="Network traffic analysis"
   description="Learn how to analyze network traffic with Colander"
   href="/guides/g9"

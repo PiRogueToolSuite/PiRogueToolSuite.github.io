@@ -10,7 +10,7 @@ The name of the isolated network interface can be found with the command below b
 pirogue-admin-client system get-configuration
 ```
 
-{{< details "ℹ️ How to get the isolated network interface" >}}
+{{< details "How to get the isolated network interface" >}}
 In this example, the name of the isolated network interface is `wg0`.
 {{< terminal 
 prompt="pi@pirogue ➜" 

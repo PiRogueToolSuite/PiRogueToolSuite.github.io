@@ -1,14 +1,13 @@
 ---
-title: "Setup Colander Companion on mobile/tablet"
-description: "Setup Colander Companion on mobile/tablet"
-draft: true
+title: "Install Colander Companion on mobile/tablet"
+description: "Install Colander Companion on mobile/tablet"
+draft: false
 toc: false
 weight: 20
 images: []
 contributors: ["Christophe Andral"]
 params:
   steps: [
-    "colander-companion-get-api-colander-settings",
     "colander-companion-firefox-mobile-unlock-xpi-sideload",
     "colander-companion-download",
     "colander-companion-firefox-mobile-installation",
@@ -16,18 +15,19 @@ params:
     "colander-companion-configure",
   ]
 type: 'cookbooks'
+tags: ['colander_companion', 'extension']
 categories: ['cookbooks']
-group: 'f. Acquisition'
+group: 'a. Setup'
 ---
 
 {{< callout context="caution" title="Requirements" icon="alert-triangle" >}}
-* this assume you have installed Mozilla Firefox on your mobile/tablet device
+You must have a Colander account.
 {{< /callout >}}
 
 Even though Colander Companion is validated and signed by Mozilla,
-it is not publicly listed in the addons Mozilla extension store.
-Unfortunately, Firefox Mobile does not automatically install trusted `.xpi` extensions
+it's not publicly listed in the addons Mozilla extension store.
+Unfortunately, Firefox Mobile doesn't automatically install trusted `.xpi` extensions
 as the desktop version does.
-That said, it is possible to enable this feature in your mobile browser.
+That said, it's possible to enable this feature on your mobile browser.
 
 {{< recipe >}}

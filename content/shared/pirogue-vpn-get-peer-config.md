@@ -6,7 +6,7 @@ To connect a peer to the Wireguard VPN, you first need to get its configuration.
 pirogue-admin-client vpn get-peer-config [peer ID]
 ```
 
-{{< details "ℹ️ Example of peer configuration" >}}
+{{< details "Example of peer configuration" >}}
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of peer configuration"
@@ -25,7 +25,7 @@ PersistentKeepAlive = 20
 {{< /terminal >}}
 {{< /details >}}
 
-{{< details "ℹ️ Save the peer configuration in a file" >}}
+{{< details "Save the peer configuration in a file" >}}
 To save the configuration of the peer in a `.conf` file to be loaded on the device, use the command: 
 ```shell {title="Save the configuration of the peer in a file"}
 pirogue-admin-client vpn get-peer-config [peer ID] > my-peer-[peer ID].conf

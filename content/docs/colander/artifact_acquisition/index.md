@@ -1,6 +1,6 @@
 ---
 title: "Artifact acquisition"
-draft: true
+draft: false
 images: []
 menu:
   docs:
@@ -30,14 +30,14 @@ The extension captures a static rendering of a webpage and transfers it to your 
 ### Installation
 
 {{< link-card
-  icon="notes"
+  icon="list-details"
   title="Setup Colander Companion for desktop"
   description="Learn how to install and configure Colander Companion for desktop"
   href="/cookbooks/colander-companion-setup"
 >}}
 
 {{< link-card
-  icon="notes"
+  icon="list-details"
   title="Setup Colander Companion for mobile or tablet"
   description="Learn how to install and configure Colander Companion for mobile or tablet"
   href="/cookbooks/colander-companion-mobile-setup"

@@ -12,15 +12,28 @@
         {{range .Site.RegularPages.GroupByParam "group" }}
           {{ $groupname := substr .Key 3 }}
           <h2>{{ $groupname | title }}</h2>
-          <div class="card-list mt-0">
+          <div class="card-nav mt-0">
             {{ range .Pages }}
               {{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
-                <div class="card my-2 shadow-sm border-primary-subtle">
-                  <div class="card-body p-3">
-                    <a class="stretched-link" href="{{ .RelPermalink }}">
-                      {{ partial "inline-svg" (dict "src" "notes" "class" "mb-1 small") }}
-                       {{ .Params.title | title }} in {{len .Params.steps}} steps &rarr;
+                <div class="card my-2">
+                  <div class="card-body p-2">
+                    <!-- {{.Params.weight}} -->
+                    <a class="stretched-link icon-link icon-link-hover" href="{{ .RelPermalink }}">
+                      {{ partial "inline-svg" (dict "src" "list-details" "class" "mb-1 small") -}}
+                      <span class="ms-0">
+                        {{ .Params.title | title }}
+                        in {{len .Params.steps}} steps
+                      </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                        stroke-linecap="round" stroke-linejoin="round" class="bi">
+                        <path d="M5 12h.5m3 0h1.5m3 0h6" />
+                        <path d="M15 16l4 -4" />
+                        <path d="M15 8l4 4" />
+                      </svg>
                     </a>
+                    <div class="ms-4 text-xs font-monospace text-muted fst-italic">
+                      {{range .Params.tags}} #{{ . }} {{end}}
+                    </div>
                   </div>
                 </div>
               {{ end }}

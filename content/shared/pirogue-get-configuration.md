@@ -11,7 +11,7 @@ pirogue-admin-client system get-configuration
 
 And check if everything is correct.
 
-{{< details "ℹ️ Example of PiRogue configuration" >}}
+{{< details "Example of PiRogue configuration" >}}
 {{< terminal 
 prompt="pi@pirogue ➜" 
 title="Example of configuration"

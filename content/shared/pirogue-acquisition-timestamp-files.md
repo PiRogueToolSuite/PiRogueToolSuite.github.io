@@ -16,7 +16,7 @@ The command generates a file `hashes.txt` listing the `sha512` hash of every fil
 * `hashes.txt.tsr`: the time stamp reply
 
 
-{{< details "ℹ️ Time stamp the content of a folder" >}}
+{{< details "Time stamp the content of a folder" >}}
 In this example, we time stamp the files contained in the folder `drop`.
 {{< terminal 
 prompt="pi@pirogue ➜" 

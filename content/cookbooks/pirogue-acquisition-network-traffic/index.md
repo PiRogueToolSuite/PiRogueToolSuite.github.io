@@ -3,7 +3,7 @@ title: "Capture the network traffic of a device"
 description: "Capture the network traffic of a device"
 draft: false
 toc: false
-weight: 3
+weight: 10
 images: []
 contributors: ["Esther Onfroy"]
 params:
@@ -12,6 +12,7 @@ params:
     "pirogue-acquisition-network-traffic",
   ]
 type: 'cookbooks'
+tags: ['pirogue', 'network_traffic']
 categories: ['cookbooks']
 group: 'f. Acquisition'
 ---

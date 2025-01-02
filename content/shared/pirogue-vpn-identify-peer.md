@@ -11,7 +11,7 @@ The Wireguard peers configured on your PiRogue are not named, a peer is identifi
 | 2024-10-27 |     `6` |      `10.8.0.9` |    Camilla |
 
 
-{{< details "ℹ️ How to find the IP address of a peer" >}}
+{{< details "How to find the IP address of a peer" >}}
 The IP address of a peer is specified in the configuration of each peer, it corresponds to the `Address`. It's specified using [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) notation, ignore the value after the `/`. 
 
 In this example, we want to get the IP address of peer 2. 

@@ -3,7 +3,7 @@ title: "Upload files from PiRogue to Colander"
 description: "Upload files from PiRogue to Colander"
 draft: false
 toc: false
-weight: 4
+weight: 40
 images: []
 contributors: ["Esther Onfroy"]
 params:
@@ -12,6 +12,7 @@ params:
     "pirogue-colander-upload-file",
   ]
 type: 'cookbooks'
+tags: ['pirogue', 'colander', 'upload', 'artifact']
 categories: ['cookbooks']
 group: 'f. Acquisition'
 ---

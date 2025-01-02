@@ -14,8 +14,9 @@ params:
     "pirogue-dashboard-config",
   ]
 type: 'cookbooks'
+tags: ['pirogue', 'vpn']
 categories: ['cookbooks']
-group: 'a. PiRogue VPN'
+group: 'a. Setup'
 ---
 
 {{< callout context="tip" title="Hosting providers compatibility" icon="rocket" >}}

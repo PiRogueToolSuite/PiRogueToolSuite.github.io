@@ -18,7 +18,7 @@ Once done, the output folder contains all the files and their metadata in `[file
 * `modification_timestamp`: the timestamp of the last modification of the file before its transfer
 * `original_filename`: the original name of the file before its transfer
 
-{{< details "ℹ️ Transfer files from a device to PiRogue" >}}
+{{< details "Transfer files from a device to PiRogue" >}}
 In this example, we store the files in the folder `drop`.
 {{< terminal 
 prompt="pi@pirogue ➜" 

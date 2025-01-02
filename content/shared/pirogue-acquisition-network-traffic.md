@@ -29,7 +29,7 @@ In the command above, replace:
 Press *Ctrl+C* to stop the capture.
 
 
-{{< details "ℹ️ How to capture the network traffic of a device" >}}
+{{< details "How to capture the network traffic of a device" >}}
 In this example, the name of the isolated network interface is `wg0`, `10.8.0.2` is the IP address of the device and the network traffic will be saved in the file `/tmp/traffic.pcap`.
 {{< terminal 
 prompt="pi@pirogue ➜" 
