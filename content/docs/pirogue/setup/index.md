@@ -20,13 +20,13 @@ See below the default configuration depending on the version of your PiRogue:
 {{< tabs "wifi-and-dashboard-configuration" >}}
 {{< tab "PiRogue version 2.x" >}}
 
-In this version of PiRogue, the passphrase of the WiFi access-point and the password of the dashboard are randomly generated during the installation. 
+In this version of PiRogue, the passphrase of the WiFi access-point and the password of the dashboard are randomly generated during the installation.
 
 On your PiRogue
 * the command `pirogue-admin-client wifi get-configuration` will give you the passphrase of the WiFi
 * the command `pirogue-admin-client dashboard get-configuration` will give you the password of the dashboard for the user `admin`
 
-The dashboard is accessible on `http://pirogue.local/dashboard`.  
+The dashboard is accessible on `http://pirogue.local/dashboard`.
 If you want to change the passwords, please refer to the [configuration documentation](/docs/pirogue/version_2.x/configuration/).
 
 {{< /tab >}}
@@ -37,7 +37,7 @@ In this version of PiRogue:
 * the default passphrase of the WiFi is `superlongkey`
 * the default password of the dashboard for the user `admin` is `PiRogue`
 
-The dashboard is accessible on `http://pirogue.local:3000`.  
+The dashboard is accessible on `http://pirogue.local:3000`.
 If you want to change the passwords, please refer to the [configuration documentation](/docs/pirogue/version_1.x/configuration/).
 
 {{< /tab >}}
@@ -187,8 +187,12 @@ There are two big differences though:
  2. We need to create WireGuard peers, and configure the VPN on e.g. phones to be
     analyzed.
 
-Assuming a DNS record exists already, pointing to the public IP address of the
-PiRogue, requesting a certificate and adjusting the web server configuration can
+Here, we assume :
+ * a DNS record exists already, pointing to the public IP address of the
+PiRogue.
+ * port `80` and `443` from your public IP address fully translate to your PiRogue respective ports
+
+Requesting a certificate and adjusting the web server configuration can
 be done this way:
 
 ```shell

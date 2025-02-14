@@ -2,9 +2,12 @@
 title: "Make the dashboard accessible from the Internet"
 ---
 
-Here, we assume a DNS record exists already, pointing to the public IP address of the
-PiRogue, requesting a certificate and adjusting the web server configuration can
-be done this way:
+Here, we assume :
+ * a DNS record exists already, pointing to the public IP address of the
+PiRogue.
+ * port `80` and `443` from your public IP address fully translate to your server respectives ports
+
+Requesting a certificate and adjusting the web server configuration can be done this way:
 
 ```shell
 pirogue-admin-client external-network enable-public-access --domain pirogue.example.org --email contact@example.org

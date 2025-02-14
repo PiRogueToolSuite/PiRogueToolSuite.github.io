@@ -42,10 +42,10 @@ pirogue-admin-client system get-configuration
 ```
 
 The result should look like:
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of configuration"
-cmd="pirogue-admin-client system get-configuration" 
+cmd="pirogue-admin-client system get-configuration"
 >}}
 DASHBOARD_PASSWORD: PiRogue
 ENABLE_DHCP: 'True'
@@ -138,8 +138,8 @@ pirogue-admin-client dashboard set-configuration --password 'mySuperSecretPasswo
 The dashboard is accessible on `http://<PiRogue IP address>/dashboard` when the PiRogue is running in the modes access-point or appliance.
 
 ### Network ports management
-By default, the PiRogue blocks most of the network traffic coming from the isolated network except the traffic on the Internet. 
-The PiRogue handles the DCHP and DNS requests from the devices connected to the isolated network. The network traffic from the 
+By default, the PiRogue blocks most of the network traffic coming from the isolated network except the traffic on the Internet.
+The PiRogue handles the DCHP and DNS requests from the devices connected to the isolated network. The network traffic from the
 isolated network to the external network is blocked.
 
 {{< img src="pirogue_isolated_device" alt="Device connected to PiRogue isolated network interface" class="d-block mx-auto" >}}
@@ -155,10 +155,10 @@ pirogue-admin-client isolated-network list-open-ports
 ```
 
 And the result looks like (if any ports are open):
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of list of the ports that have been opened"
-cmd="pirogue-admin-client isolated-network list-open-ports" 
+cmd="pirogue-admin-client isolated-network list-open-ports"
 >}}
 - port: 8080
 - port: 9090
@@ -198,10 +198,10 @@ pirogue-admin-client wifi get-configuration
 ```
 
 The output looks like:
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of WiFi access-point configuration"
-cmd="pirogue-admin-client wifi get-configuration" 
+cmd="pirogue-admin-client wifi get-configuration"
 >}}
 country_code: FR
 passphrase: superlongkey
@@ -238,10 +238,10 @@ pirogue-admin-client vpn add-peer
 ```
 
 The result will look like:
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of a peer definition"
-cmd="pirogue-admin-client vpn add-peer" 
+cmd="pirogue-admin-client vpn add-peer"
 >}}
 idx: 3
 private_key: YGe5EF//sIj6QF/2sglmx20b7jxgxFpV1sl8hXBDy34=
@@ -255,10 +255,10 @@ pirogue-admin-client vpn list-peers
 ```
 
 The result will look like:
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of list of Wireguard peers"
-cmd="pirogue-admin-client vpn list-peers" 
+cmd="pirogue-admin-client vpn list-peers"
 >}}
 - idx: 2
   private_key: oA3PBMH5yhBCIykx1odFPbnH+QKq18FBPmdPU1MrmEQ=
@@ -280,10 +280,10 @@ pirogue-admin-client vpn get-peer-config 3
 ```
 
 The result looks like:
-{{< terminal 
-prompt="pi@pirogue ➜" 
+{{< terminal
+prompt="pi@pirogue ➜"
 title="Example of peer configuration"
-cmd="pirogue-admin-client vpn get-peer-config 3" 
+cmd="pirogue-admin-client vpn get-peer-config 3"
 >}}
 [Interface]
 Address = 10.8.0.3/24
@@ -297,7 +297,7 @@ AllowedIPs = 0.0.0.0/0
 PersistentKeepAlive = 20
 {{< /terminal >}}
 
-You need to save the configuration of the peer in a `.conf` file to be loaded on the device. To do so, use the command: 
+You need to save the configuration of the peer in a `.conf` file to be loaded on the device. To do so, use the command:
 ```shell {title="Save the configuration of the peer #3 in the file my-peer-3.conf"}
 pirogue-admin-client vpn get-peer-config 3 > my-peer-3.conf
 ```
@@ -308,7 +308,7 @@ pirogue-admin-client vpn get-peer-config 3 | qrencode -t ansiutf8
 ```
 
 ## Make the PiRogue accessible from the Internet
-Opening the PiRogue to the Internet refers to the ability for a PiRogue to be reached via the Internet. This notion is crucial for security 
+Opening the PiRogue to the Internet refers to the ability for a PiRogue to be reached via the Internet. This notion is crucial for security
 and PiRogue network configuration.
 
 By default, the PiRogue dashboard and remote administration are not publicly exposed on the Internet.
@@ -324,6 +324,7 @@ Let's assume the following:
 * you have a valid administrative email address: `contact@my-domain.org`
 * the IP address on the Internet of your PiRogue is `185.199.111.153`
 * the domain `pirogue-lab.my-domain.org` resolves the IP address of your PiRogue: `pirogue-lab.my-domain.org. 3600	IN	A	185.199.111.153`
+* if `185.199.111.153` is firewalled, reaching port `80` and `443` from Internet fully translates to your PiRogue respective ports
 
 To Make the PiRogue accessible from the Internet, you have to run the following command on your PiRogue:
 ```shell {title="Make the PiRogue accessible from the Internet"}
