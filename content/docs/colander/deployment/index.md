@@ -131,6 +131,61 @@ This creates a file `group_vars/colander/vault` in which you must specify:
 * `email_use_tls`: true if the SMTP server uses TLS, false otherwise
 * `email_use_ssl`: true if the SMTP server uses SSL, false otherwise
 
+{{< details "Example of configuration" >}}
+```yaml
+colander_vault:
+  # Email
+  acme_email: "machines@my.domain"
+  admin_name: "Badass Admin"
+  admin_email: "admin@my.domain"
+  django_default_from_email: "admin@my.domain"
+  email_host: "smtp.my.provider.com"
+  email_host_user: "machines@my.domain"
+  email_host_password: "password"
+  email_port: 465
+  email_use_tls: false
+  email_use_ssl: true
+
+  # Domains & sub-domains
+  root_domain: "my.domain"
+  colander_base_url: "https://colander.my.domain" 
+  colander_django_allowed_hosts: "colander.my.domain"
+  colander_fqdn: "colander.my.domain"
+  threatr_base_url: "https://threatr.my.domain" 
+  threatr_django_allowed_hosts: "threatr.my.domain"
+  threatr_fqdn: "threatr.my.domain"
+  cyberchef_base_url: "https://cyberchef.my.domain" 
+  cyberchef_fqdn: "cyberchef.my.domain" 
+  traefik_base_url: "https://traefik.my.domain" 
+  traefik_fqdn: "traefik.my.domain" 
+
+  # Traefik
+  traefik_auth_salt: "randomly generated"
+  traefik_admin_user: "admin"
+  traefik_admin_password: "randomly generated"
+
+  # Colander
+  colander_django_secret_key: "randomly generated"
+  colander_django_admin_url: "randomly generated"
+  colander_postgres_user: "randomly generated"
+  colander_postgres_password: "randomly generated"
+  colander_admin_user: "admin"
+  colander_admin_password: "randomly generated"
+
+  # Threatr
+  threatr_django_secret_key: "randomly generated"
+  threatr_django_admin_url: "randomly generated"
+  threatr_postgres_user: "randomly generated"
+  threatr_postgres_password: "randomly generated"
+  threatr_admin_user: "admin"
+  threatr_admin_password: "randomly generated"
+
+  # Minio
+  minio_access_key: "randomly generated"
+  minio_secret_key: "randomly generated"
+```
+{{< /details >}}
+
 Finally, back up and encrypt this file as a configuration vault, it contains sensitive information and secrets:
 ```shell {title="💻 Encrypt the file that contains the secrets"}
 ansible-vault encrypt group_vars/colander/vault
@@ -138,13 +193,19 @@ ansible-vault encrypt group_vars/colander/vault
 
 Don't forget to save the password of your vault in your favorite password manager.
 
-⚠️ Before going further, make sure you have configured subdomains pointing to your server:
+{{< callout context="caution" title="Domains" icon="alert-triangle" >}}
+Before going further, make sure you have configured all the subdomains listed in your configuration vault:
 * `colander.[your domain]`
-* `threatr.[your domain]` only if you are planning to deploy Threatr, check your inventory file
-* `cyberchef.[your domain]` only if you are planning to deploy Cyberchef, check your inventory file
+* `threatr.[your domain]` only if you are deploying Threatr, check your inventory file
+* `cyberchef.[your domain]` only if you are deploying Cyberchef, check your inventory file
 * `traefik.[your domain]`
 
 As an example, if your domain is `my.domain` and the public IP address of your server is `253.127.98.9`, your A record would look like `colander.my.domain A 253.127.98.9`.
+{{< /callout >}}
+
+{{< callout context="danger" title="Immutable configuration" icon="alert-octagon" >}}
+Never modify your configuration vault after Colander has been deployed.
+{{< /callout >}}
 
 You are now ready to deploy Colander on your server 🎉
 
