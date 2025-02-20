@@ -106,7 +106,7 @@ ansible-playbook -K -i production.yml playbooks/install-docker.yml
 Ansible will ask you to enter the *BECOME password* which corresponds to the password of the user *colander* you have created. The playbook installs Docker in the [rootless mode](https://docs.docker.com/engine/security/rootless/).
 
 
-## Colander configuration
+## Configure Colander
 Before deploying Colander on your server, you must generate its configuration. The generated file contains all the secrets of your Colander server. Most of the secrets are randomly generated.
 
 To generate the configuration, run the command on your laptop:
@@ -131,7 +131,7 @@ This creates a file `group_vars/colander/vault` in which you must specify:
 * `email_use_tls`: true if the SMTP server uses TLS, false otherwise
 * `email_use_ssl`: true if the SMTP server uses SSL, false otherwise
 
-Finally, back up and encrypt this file as it contains sensitive information and secrets:
+Finally, back up and encrypt this file as a configuration vault, it contains sensitive information and secrets:
 ```shell {title="💻 Encrypt the file that contains the secrets"}
 ansible-vault encrypt group_vars/colander/vault
 ```
@@ -191,7 +191,7 @@ All authentication failures are logged in `journald` with a fixed format:
 `<date> <hostname> <container>: ERROR <date> signals 19 <timestamp> COLANDER_AUTH_FAILURE username:[<user>] email:[<email address>] ip:[<IP address of the client>] datetime:[<date>] routable:[<True if the IP address is public, False otherwise>]`
 
 ## Back up
-A *bash* script is automatically installed in `/home/colander/colander/scripts`, when called, it creates:
+A *bash* script is automatically installed in `/home/colander/colander/scripts/backup`, when called, it creates:
 * a dump of Colander database
 * a dump of Threatr database (if deployed)
 * a snapshot of Elasticsearch indices
@@ -221,8 +221,26 @@ You are free to use your favorite backup tool to schedule them according to your
 Alternatively, you can create an archive of all Docker volumes after shutting down the whole stack. 
 
 
+## Restore
+The restoration of a backup is manual operation to perform on your server. The backups are stored in `/home/colander/colander/backups/`, each folder corresponds to a backup. To restore a backup, make sure Colander is up and running, and run the following command on your server:
+
+```shell {title="📦 Restore a backup"}
+/home/colander/colander/scripts/restore "[name of the backup]"  # e.g., ./restore "2025_02_18-13_47_01"
+```
+
+The name of the backup corresponds to the name of folder named with the date and time of the backup. 
+
+Finally, you must restart Colander:
+```shell {title="💻 Restart Colander"}
+ansible-playbook -J -K -i production.yml playbooks/restart-colander.yml
+```
+
+{{< callout context="danger" title="Configuration vault and backups" icon="alert-octagon" >}}
+The backups are strongly dependent of the configuration of Colander. A backup is valid for only one configuration, never mix backups from different Colander servers. Your backups contain passwords that are encrypted with the secret keys defined in the generated configuration stored in your configuration vault.
+{{< /callout >}}
+
 ## Tear down Colander
-If you want to completely uninstall Colander, run the playbook `teardown-colander.yml`. All containers, volumes, images, data, backups, configuration files will be permanently deleted. This action cannot be reverted.
+If you want to completely uninstall Colander, run the playbook `teardown-colander.yml`. All containers, volumes, images, data, backups, configuration files will be permanently deleted. This action is irreversible.
 
 ```shell {title="💻 Tear down Colander"}
 ansible-playbook -J -K -i production.yml playbooks/teardown-colander.yml
